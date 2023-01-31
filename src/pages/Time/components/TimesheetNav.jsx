@@ -48,6 +48,11 @@ const TimesheetNav = (props) => {
         <div>
           <Button type="primary" size="small">Submit</Button>
         </div>
+        <div className="ml-1">
+          <Button size="small">
+            Export
+          </Button>
+        </div>
       </div>
     </>
   );

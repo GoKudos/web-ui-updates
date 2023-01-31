@@ -47,9 +47,12 @@ const ProjectNav = (props) => {
           </Button>
         </div>
         <div>
-          <Select value={props.view} onChange={(e) => {
-            props.setView(e)
-          }}>
+          <Select
+            value={props.view}
+            onChange={(e) => {
+              props.setView(e);
+            }}
+          >
             <Select.Option value="group">Group</Select.Option>
             <Select.Option value="member">Member</Select.Option>
           </Select>
@@ -62,6 +65,11 @@ const ProjectNav = (props) => {
               Approve
             </Button>
           )} */}
+        </div>
+        <div className="ml-1">
+          <Button type="primary" size="small">
+            Export
+          </Button>
         </div>
       </div>
     </>

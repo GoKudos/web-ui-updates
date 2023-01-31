@@ -45,6 +45,11 @@ const ProjectNav = (props) => {
             <IconRight className="text-gray-400 ml-1" />
           </Button>
         </div>
+        <div>
+          <Button type="primary" size="small">
+            Export
+          </Button>
+        </div>
       </div>
     </>
   );

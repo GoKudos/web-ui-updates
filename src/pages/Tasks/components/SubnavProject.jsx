@@ -5,6 +5,7 @@ import {
   IconSort,
   IconMore,
   IconMoreVertical,
+  IconApps,
 } from "@arco-design/web-react/icon";
 import { Link } from "react-router-dom";
 import { projectsData } from "@/pages/Tasks/utils/sample_data";
@@ -12,6 +13,7 @@ import WorkspaceAdd from "./WorkspaceAdd";
 import WorkspaceDelete from "./WorkspaceDelete";
 import ProjectAdd from "./ProjectAdd";
 import ProjectDelete from "./ProjectDelete";
+import ProjectTemplateGallery from "./ProjectTemplateGallery";
 import ProjectMove from "./ProjectMove";
 import ProjectDuplicate from "./ProjectDuplicate";
 import { useState } from "react";
@@ -21,6 +23,7 @@ const SubnavProject = () => {
   const [modalWorkspaceDelete, setModalWorkspaceDelete] = useState(false);
   const [modalProject, setModalProject] = useState(false);
   const [modalProjectDelete, setModalProjectDelete] = useState(false);
+  const [modalProjectTemplate, setModalProjectTemplate] = useState(false);
   const [modalProjectMove, setModalProjectMove] = useState(false);
   const [modalProjectDuplicate, setModalProjectDuplicate] = useState(false);
 
@@ -101,6 +104,16 @@ const SubnavProject = () => {
         >
           Add Project
         </Button>
+        <Button
+          long
+          type="text"
+          size="small"
+          className="text-gray-600"
+          // icon={<IconApps className="w-3 h-3 ml-2" />}
+          onClick={() => setModalProjectTemplate(true)}
+        >
+          Project Templates
+        </Button>
       </div>
       <hr className="my-2" />
       <div className="flex-grow overflow-y-auto">
@@ -136,6 +149,10 @@ const SubnavProject = () => {
       <ProjectDelete
         visible={modalProjectDelete}
         setVisible={setModalProjectDelete}
+      />
+      <ProjectTemplateGallery
+        visible={modalProjectTemplate}
+        setVisible={setModalProjectTemplate}
       />
       <ProjectMove
         visible={modalProjectMove}
